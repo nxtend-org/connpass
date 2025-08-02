@@ -1,0 +1,6 @@
+pre-commit:  
+  jobs:
+    - name: Run Biome Format
+      run: bun run biome format --write {staged_files}
+      glob: '*.{json,jsonc,yaml,yml}'
+      stage_fixed: true
